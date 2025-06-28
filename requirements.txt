@@ -1,0 +1,4 @@
+Flask>=2.0
+# Andre avhengigheter vil bli lagt til her etter hvert
+# f.eks. gunicorn for produksjonsserver
+# f.eks. python-dotenv for miljøvariabler

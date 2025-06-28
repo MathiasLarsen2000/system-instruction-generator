@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Prompt Engineering Workbench{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Prompt Engineering Workbench</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Hjem</a></li>
+                <li><a href="{{ url_for('list_system_instructions') }}">Systeminstrukser</a></li>
+                <!-- f.eks. <li><a href="{{ url_for('list_prompts') }}">Prompts</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Prompt Engineering Workbench</p>
+    </footer>
+
+    {% block scripts %}
+    <!-- JavaScript-filer kan lenkes her -->
+    <!-- <script src="{{ url_for('static', filename='js/main.js') }}"></script> -->
+    {% endblock %}
+</body>
+</html>

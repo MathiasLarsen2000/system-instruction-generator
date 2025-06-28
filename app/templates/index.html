@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Velkommen - {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <h2>Velkommen til Prompt Engineering Workbench!</h2>
+    <p>Dette er startsiden. Herfra vil du kunne navigere til de ulike verktøyene for å lage, teste og administrere dine prompts og systeminstrukser.</p>
+    <p>Kommende funksjoner:</p>
+    <ul>
+        <li>Visning og redigering av systeminstrukser</li>
+        <li>Visning og redigering av prompts</li>
+        <li>A/B-testing av prompts mot ulike modeller</li>
+        <li>Mye mer!</li>
+    </ul>
+{% endblock %}
