@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ title }} - {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <h2>Tilgjengelige Systeminstrukser</h2>
+    {% if files %}
+        <ul>
+            {% for file in files %}
+                <li>
+                    <a href="{{ url_for('view_system_instruction', filename=file.path) }}">{{ file.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Ingen systeminstruksjonsfiler funnet i <code>{{ SI_FOLDER }}</code>.</p>
+        <p>Du kan legge til .json-filer i denne mappen.</p>
+    {% endif %}
+    <p><a href="{{ url_for('index') }}">Tilbake til hovedsiden</a></p>
+{% endblock %}
